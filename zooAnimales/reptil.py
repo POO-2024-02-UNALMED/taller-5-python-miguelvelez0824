@@ -11,27 +11,30 @@ class Reptil(Animal):
         self._largoCola = largoCola
         Reptil.listado.append(self)
     
+    def setColorEscamas(self, newColor):
+        self._colorEscamas = newColor
     def getColorEscamas(self):
         return self._colorEscamas
-    def setColorEscamas(self, nuevoColorEscamas):
-        self._colorEscamascolorEscamas = nuevoColorEscamas
-
+    
+    def setLargoCola(self, newLargo):
+        self._largoCola = newLargo
     def getLargoCola(self):
         return self._largoCola
-    def setCola(self, nuevoLargoCola):
-        self._largoCola = nuevoLargoCola
-
+    
+    def cantidadReptiles(self):
+        return len(Reptil.listado)
+    
     def movimiento(self):
         return "reptar"
     
     @staticmethod
-    def crearIguana(nombreIguana, edadIguana, generoIguana):
-        iguana = Reptil(nombreIguana, edadIguana, "humedal", generoIguana, "verde", 3)
+    def crearIguana(nombre, edad, genero):
+        iguana = Reptil(nombre, edad, "humedal", genero, "verde", 3)
         Reptil.iguanas += 1
         return iguana
     
     @staticmethod
-    def crearSerpiente(nombreSerpiente, edadSerpiente, generoSerpiente):
-        serpiente = Reptil(nombreSerpiente, edadSerpiente, "jungla", generoSerpiente, "blanco", 1)
+    def crearSerpiente(nombre, edad, genero):
+        serpiente = Reptil(nombre, edad, "jungla", genero, "blanco", 1)
         Reptil.serpientes += 1
         return serpiente
