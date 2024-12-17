@@ -1,9 +1,3 @@
-from .mamifero import Mamifero
-from .anfibio import Anfibio
-from .ave import Ave
-from .pez import Pez
-from .reptil import Reptil
-
 class Animal:
     totalAnimales = 0
     def __init__(self, nombre = None, edad = 0, habitat = None, genero = None):
@@ -19,6 +13,11 @@ class Animal:
     
     @staticmethod
     def totalPorTipo():
+        from .mamifero import Mamifero
+        from .anfibio import Anfibio
+        from .ave import Ave
+        from .pez import Pez
+        from .reptil import Reptil
         mensaje = f"Mamiferos : {len(Mamifero.listado)}\nAves : {len(Ave.listado)}\nReptiles : {len(Reptil.listado)}\nPeces : {len(Pez.listado)}\nAnfibios : {len(Anfibio.listado)}"
         return mensaje
 
