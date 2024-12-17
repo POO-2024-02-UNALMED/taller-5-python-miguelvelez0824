@@ -18,7 +18,7 @@ class Animal:
     
     @staticmethod
     def totalPorTipo():
-        return "Mamiferos: " + str(len(Mamifero.listado)) + "\n" + "Aves: " + str(len(Ave.listado)) + "\n" + "Reptiles: " + str(len(Reptil.listado)) + "\n" + "Peces: " + str(len(Pez.listado)) + "\n" + "Anfibios: " + str(len(Anfibio.listado))
+        return f"Mamiferos : {len(Mamifero.listado)}\nAves : {len(Ave.listado)}\nReptiles : {len(Reptil.listado)}\nPeces : {len(Pez.listado)}\nAnfibios : {len(Anfibio.listado)}"
 
     def __str__(self):
         if self._zona == None:
