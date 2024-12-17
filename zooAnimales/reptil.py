@@ -21,10 +21,10 @@ class Reptil(Animal):
     def getLargoCola(self):
         return self._largoCola
     
-    def cantidadReptiles():
+    def cantidadReptiles(self):
         return len(Reptil.listado)
     
-    def movimiento():
+    def movimiento(self):
         return "reptar"
     
     @staticmethod

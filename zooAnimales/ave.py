@@ -14,10 +14,10 @@ class Ave(Animal):
     def getColorPlumas(self):
         return self._colorPlumas
     
-    def movimiento():
+    def movimiento(self):
         return "volar"
     
-    def cantidadAves():
+    def cantidadAves(self):
         return len(Ave.listado)
     
     @staticmethod

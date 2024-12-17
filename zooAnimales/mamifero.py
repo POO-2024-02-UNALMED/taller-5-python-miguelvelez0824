@@ -23,10 +23,10 @@ class Mamifero(Animal):
         Mamifero.leones += 1
         return leon
     
-    def cantidadMamiferos():
+    def cantidadMamiferos(self):
         return len(Mamifero.listado)
     
-    def serPelaje(self, newPelaje):
+    def setPelaje(self, newPelaje):
         self._pelaje = newPelaje
     def isPelaje(self):
         return self._pelaje

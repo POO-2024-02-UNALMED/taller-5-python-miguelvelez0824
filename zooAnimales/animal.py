@@ -13,12 +13,12 @@ class Animal:
         self._genero = genero
         self._zona = None
 
-    def movimiento():
+    def movimiento(self):
         return("desplazarse")
     
     @staticmethod
     def totalPorTipo():
-        return "Mamiferos: " + len(Mamifero.listado) + "\n" + "Aves: " + len(Ave.listado) + "\n" + "Reptiles: " + len(Reptil.listado) + "\n" + "Peces: " + len(Pez.listado) + "\n" + "Anfibios: " + len(Anfibio.listado)
+        return "Mamiferos: " + str(len(Mamifero.listado)) + "\n" + "Aves: " + str(len(Ave.listado)) + "\n" + "Reptiles: " + str(len(Reptil.listado)) + "\n" + "Peces: " + str(len(Pez.listado)) + "\n" + "Anfibios: " + str(len(Anfibio.listado))
 
     def __str__(self):
         if self._zona == None:
@@ -51,5 +51,5 @@ class Animal:
     def getZona(self):
         return self._zona
     
-    def getTotalAnimales():
+    def getTotalAnimales(self):
         return Animal.totalAnimales
