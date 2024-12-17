@@ -1,11 +1,12 @@
-from .mamifero import Mamifero
 from .anfibio import Anfibio
 from .ave import Ave
+from .mamifero import Mamifero
 from .pez import Pez
 from .reptil import Reptil
 
 class Animal:
     totalAnimales = 0
+
     def __init__(self, nombre = None, edad = 0, habitat = None, genero = None):
         self._nombre = nombre
         self._edad = edad
@@ -13,21 +14,20 @@ class Animal:
         self._genero = genero
         self._zona = None
         Animal.totalAnimales += 1
-
-    def movimiento(self):
-        return("desplazarse")
-    
+        
     @staticmethod
     def totalPorTipo():
         mensaje = f"Mamiferos : {len(Mamifero.listado)}\nAves : {len(Ave.listado)}\nReptiles : {len(Reptil.listado)}\nPeces : {len(Pez.listado)}\nAnfibios : {len(Anfibio.listado)}"
         return mensaje
-
+    
     def __str__(self):
-        if self._zona == None:
-            return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"
-        else:
-            return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona.getnombre()}, en el {self._zona.getZoo().getNombre()}."
+        mensaje = ""
         
+        if self._zona != None:
+            return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona.getnombre()} en el {self._zona.getZoo().getNombre()}"
+        else:
+            return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"
+    
     def getTotalAnimales(self):
         return Animal.totalAnimales
     
@@ -55,3 +55,6 @@ class Animal:
         return self._zona
     def setZona(self, newZona):
         self._zona = newZona
+
+    def movimiento(self):
+        return "desplazarse"
